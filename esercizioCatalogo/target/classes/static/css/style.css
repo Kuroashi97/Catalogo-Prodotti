@@ -1,0 +1,201 @@
+/* Stile generale */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Usa min-height invece di height per evitare problemi con contenuti lunghi */
+}
+
+.container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px; /* Aumentato per gestire tabelle più grandi */
+    text-align: center;
+    margin: 1rem; /* Aggiunto margine per evitare che il contenuto tocchi i bordi */
+}
+
+h1 {
+    color: #4a90e2;
+    margin-bottom: 1.5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"] {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%; /* Assicura che gli input occupino tutta la larghezza disponibile */
+    box-sizing: border-box; /* Include padding e border nella larghezza */
+}
+
+input[type="submit"] {
+    background-color: #4a90e2;
+    color: #fff;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Assicura che il pulsante occupi tutta la larghezza */
+}
+
+input[type="submit"]:hover {
+    background-color: #357abd;
+}
+
+.messaggio {
+    margin-top: 1rem;
+    color: #e74c3c;
+    font-size: 0.9rem;
+}
+
+/* Stile per la tabella dei risultati */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    margin-bottom: 1rem; /* Aggiunge spazio sotto la tabella */
+}
+
+/* Stile per il pulsante "Nuova Ricerca" */
+.button-nuova-ricerca {
+    margin-top: 1rem; /* Aggiunge spazio sopra il pulsante */
+    display: inline-block; /* Mantiene il pulsante inline */
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+}
+
+th {
+    background-color: #4a90e2;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Stile per i pulsanti nelle celle della tabella */
+td .button {
+    margin: 0.25rem;
+    display: inline-block; /* Evita la sovrapposizione */
+    white-space: nowrap; /* Impedisce il wrapping del testo */
+    text-align: center; /* Allinea il testo al centro */
+    min-width: 80px; /* Larghezza minima per i pulsanti */
+}
+
+/* Stile per i pulsanti */
+.button {
+    background-color: #4a90e2;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #357abd;
+}
+
+/* Stile per i pulsanti di azione */
+.button-modifica {
+    background-color: #28a745;
+}
+.button-nuova-ricerca {
+    margin-top: 1.5rem; /* Aggiunge spazio sopra il pulsante */
+    display: inline-block; /* Mantiene il pulsante inline */
+}
+.button-modifica:hover {
+    background-color: #218838;
+}
+
+.button-cancella {
+    background-color: #dc3545;
+}
+
+.button-cancella:hover {
+    background-color: #c82333;
+}
+
+/* Responsive design per le tabelle */
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    th {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        border: 1px solid #ccc;
+    }
+
+    td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td:before {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        content: attr(data-label);
+    }
+
+    .button {
+        width: 100%;
+        margin: 0.25rem 0;
+    }
+    
+    /* Stile per il tasto "Torna Indietro" */
+.button-torna {
+    background-color: #6c757d; /* Colore grigio */
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-torna:hover {
+    background-color: #5a6268; /* Colore grigio scuro */
+}
+}
